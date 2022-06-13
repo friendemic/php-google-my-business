@@ -61,19 +61,19 @@ class Google_Service_MyBusiness extends Google_Service
   public function __construct(Google_Client $client)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://mybusiness.googleapis.com/';
+ $this->rootUrl = 'https://mybusinessbusinessinformation.googleapis.com/';
     $this->servicePath = '';
-    $this->version = 'v4';
-    $this->serviceName = 'mybusiness';
+    $this->version = 'v1';
+    $this->serviceName = 'mybusinessbusinessinformation';
 
-    $this->accounts = new Google_Service_MyBusiness_Accounts_Resource(
+    $this->accounts = new MyBusiness_Accounts_Resource(
         $this,
         $this->serviceName,
         'accounts',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v4/accounts',
+              'path' => 'v1/accounts',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'primaryOwner' => array(
@@ -82,7 +82,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'deleteNotifications' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -92,7 +92,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'generateAccountNumber' => array(
-              'path' => 'v4/{+name}:generateAccountNumber',
+              'path' => 'v1/{+name}:generateAccountNumber',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -102,7 +102,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -112,7 +112,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'getNotifications' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -122,7 +122,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/accounts',
+              'path' => 'v1/accounts',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'filter' => array(
@@ -143,7 +143,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'listRecommendGoogleLocations' => array(
-              'path' => 'v4/{+name}:recommendGoogleLocations',
+              'path' => 'v1/{+name}:recommendGoogleLocations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -161,7 +161,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'update' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'name' => array(
@@ -175,7 +175,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'updateNotifications' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'name' => array(
@@ -188,14 +188,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_admins = new Google_Service_MyBusiness_AccountsAdmins_Resource(
+    $this->accounts_admins = new MyBusiness_AccountsAdmins_Resource(
         $this,
         $this->serviceName,
         'admins',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v4/{+parent}/admins',
+              'path' => 'v1/{+parent}/admins',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -205,7 +205,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -215,7 +215,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/admins',
+              'path' => 'v1/{+parent}/admins',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -225,7 +225,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -238,14 +238,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_invitations = new Google_Service_MyBusiness_AccountsInvitations_Resource(
+    $this->accounts_invitations = new MyBusiness_AccountsInvitations_Resource(
         $this,
         $this->serviceName,
         'invitations',
         array(
           'methods' => array(
             'accept' => array(
-              'path' => 'v4/{+name}:accept',
+              'path' => 'v1/{+name}:accept',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -255,7 +255,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'decline' => array(
-              'path' => 'v4/{+name}:decline',
+              'path' => 'v1/{+name}:decline',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -265,7 +265,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/invitations',
+              'path' => 'v1/{+parent}/invitations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -282,14 +282,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations = new Google_Service_MyBusiness_AccountsLocations_Resource(
+    $this->accounts_locations = new MyBusiness_AccountsLocations_Resource(
         $this,
         $this->serviceName,
         'locations',
         array(
           'methods' => array(
             'associate' => array(
-              'path' => 'v4/{+name}:associate',
+              'path' => 'v1/{+name}:associate',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -299,8 +299,9 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'batchGet' => array(
-              'path' => 'v4/{+name}/locations:batchGet',
+              'path' => 'v1/{+name}/locations:batchGet',
               'httpMethod' => 'POST',
+              'readMask' => 'name',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
@@ -309,8 +310,9 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'batchGetReviews' => array(
-              'path' => 'v4/{+name}/locations:batchGetReviews',
+              'path' => 'v1/{+name}/locations:batchGetReviews',
               'httpMethod' => 'POST',
+              'readMask' => 'name',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
@@ -319,7 +321,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'clearAssociation' => array(
-              'path' => 'v4/{+name}:clearAssociation',
+              'path' => 'v1/{+name}:clearAssociation',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -329,7 +331,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'create' => array(
-              'path' => 'v4/{+parent}/locations',
+              'path' => 'v1/{+parent}/locations',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -347,7 +349,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -357,7 +359,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'fetchVerificationOptions' => array(
-              'path' => 'v4/{+name}:fetchVerificationOptions',
+              'path' => 'v1/{+name}:fetchVerificationOptions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -367,7 +369,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'findMatches' => array(
-              'path' => 'v4/{+name}:findMatches',
+              'path' => 'v1/{+name}:findMatches',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -377,7 +379,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -387,7 +389,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'getGoogleUpdated' => array(
-              'path' => 'v4/{+name}:googleUpdated',
+              'path' => 'v1/{+name}:googleUpdated',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -397,7 +399,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/locations',
+              'path' => 'v1/{+parent}/locations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -427,7 +429,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -449,7 +451,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'reportInsights' => array(
-              'path' => 'v4/{+name}/locations:reportInsights',
+              'path' => 'v1/{+name}/locations:reportInsights',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -459,7 +461,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'transfer' => array(
-              'path' => 'v4/{+name}:transfer',
+              'path' => 'v1/{+name}:transfer',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -469,7 +471,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'verify' => array(
-              'path' => 'v4/{+name}:verify',
+              'path' => 'v1/{+name}:verify',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -482,14 +484,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_admins = new Google_Service_MyBusiness_AccountsLocationsAdmins_Resource(
+    $this->accounts_locations_admins = new MyBusiness_AccountsLocationsAdmins_Resource(
         $this,
         $this->serviceName,
         'admins',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v4/{+parent}/admins',
+              'path' => 'v1/{+parent}/admins',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -499,7 +501,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -509,7 +511,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/admins',
+              'path' => 'v1/{+parent}/admins',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -519,7 +521,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -532,14 +534,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_followers = new Google_Service_MyBusiness_AccountsLocationsFollowers_Resource(
+    $this->accounts_locations_followers = new MyBusiness_AccountsLocationsFollowers_Resource(
         $this,
         $this->serviceName,
         'followers',
         array(
           'methods' => array(
             'getMetadata' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -552,14 +554,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_localPosts = new Google_Service_MyBusiness_AccountsLocationsLocalPosts_Resource(
+    $this->accounts_locations_localPosts = new MyBusiness_AccountsLocationsLocalPosts_Resource(
         $this,
         $this->serviceName,
         'localPosts',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v4/{+parent}/localPosts',
+              'path' => 'v1/{+parent}/localPosts',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -569,7 +571,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -579,7 +581,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -589,7 +591,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/localPosts',
+              'path' => 'v1/{+parent}/localPosts',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -607,7 +609,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -621,7 +623,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'reportInsights' => array(
-              'path' => 'v4/{+name}/localPosts:reportInsights',
+              'path' => 'v1/{+name}/localPosts:reportInsights',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -634,14 +636,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_media = new Google_Service_MyBusiness_AccountsLocationsMedia_Resource(
+    $this->accounts_locations_media = new MyBusiness_AccountsLocationsMedia_Resource(
         $this,
         $this->serviceName,
         'media',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v4/{+parent}/media',
+              'path' => 'v1/{+parent}/media',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -651,7 +653,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -661,7 +663,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -671,7 +673,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/media',
+              'path' => 'v1/{+parent}/media',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -689,7 +691,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -703,7 +705,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'startUpload' => array(
-              'path' => 'v4/{+parent}/media:startUpload',
+              'path' => 'v1/{+parent}/media:startUpload',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -716,14 +718,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_media_customers = new Google_Service_MyBusiness_AccountsLocationsMediaCustomers_Resource(
+    $this->accounts_locations_media_customers = new MyBusiness_AccountsLocationsMediaCustomers_Resource(
         $this,
         $this->serviceName,
         'customers',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -733,7 +735,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/media/customers',
+              'path' => 'v1/{+parent}/media/customers',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -754,14 +756,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_questions = new Google_Service_MyBusiness_AccountsLocationsQuestions_Resource(
+    $this->accounts_locations_questions = new MyBusiness_AccountsLocationsQuestions_Resource(
         $this,
         $this->serviceName,
         'questions',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v4/{+parent}/questions',
+              'path' => 'v1/{+parent}/questions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -771,7 +773,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -781,7 +783,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/questions',
+              'path' => 'v1/{+parent}/questions',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -811,7 +813,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -824,14 +826,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_questions_answers = new Google_Service_MyBusiness_AccountsLocationsQuestionsAnswers_Resource(
+    $this->accounts_locations_questions_answers = new MyBusiness_AccountsLocationsQuestionsAnswers_Resource(
         $this,
         $this->serviceName,
         'answers',
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'v4/{+parent}/answers:delete',
+              'path' => 'v1/{+parent}/answers:delete',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'parent' => array(
@@ -841,7 +843,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/answers',
+              'path' => 'v1/{+parent}/answers',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -863,7 +865,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'upsert' => array(
-              'path' => 'v4/{+parent}/answers:upsert',
+              'path' => 'v1/{+parent}/answers:upsert',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -876,14 +878,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_reviews = new Google_Service_MyBusiness_AccountsLocationsReviews_Resource(
+    $this->accounts_locations_reviews = new MyBusiness_AccountsLocationsReviews_Resource(
         $this,
         $this->serviceName,
         'reviews',
         array(
           'methods' => array(
             'deleteReply' => array(
-              'path' => 'v4/{+name}/reply',
+              'path' => 'v1/{+name}/reply',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -893,7 +895,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -903,7 +905,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/reviews',
+              'path' => 'v1/{+parent}/reviews',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -925,7 +927,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'updateReply' => array(
-              'path' => 'v4/{+name}/reply',
+              'path' => 'v1/{+name}/reply',
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'name' => array(
@@ -938,14 +940,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->accounts_locations_verifications = new Google_Service_MyBusiness_AccountsLocationsVerifications_Resource(
+    $this->accounts_locations_verifications = new MyBusiness_AccountsLocationsVerifications_Resource(
         $this,
         $this->serviceName,
         'verifications',
         array(
           'methods' => array(
             'complete' => array(
-              'path' => 'v4/{+name}:complete',
+              'path' => 'v1/{+name}:complete',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -955,7 +957,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v4/{+parent}/verifications',
+              'path' => 'v1/{+parent}/verifications',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -976,14 +978,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->attributes = new Google_Service_MyBusiness_Attributes_Resource(
+    $this->attributes = new MyBusiness_Attributes_Resource(
         $this,
         $this->serviceName,
         'attributes',
         array(
           'methods' => array(
             'list' => array(
-              'path' => 'v4/attributes',
+              'path' => 'v1/attributes',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'languageCode' => array(
@@ -1015,14 +1017,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->categories = new Google_Service_MyBusiness_Categories_Resource(
+    $this->categories = new MyBusiness_Categories_Resource(
         $this,
         $this->serviceName,
         'categories',
         array(
           'methods' => array(
             'list' => array(
-              'path' => 'v4/categories',
+              'path' => 'v1/categories',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'searchTerm' => array(
@@ -1050,14 +1052,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->chains = new Google_Service_MyBusiness_Chains_Resource(
+    $this->chains = new MyBusiness_Chains_Resource(
         $this,
         $this->serviceName,
         'chains',
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v4/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1067,7 +1069,7 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'search' => array(
-              'path' => 'v4/chains:search',
+              'path' => 'v1/chains:search',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resultCount' => array(
@@ -1083,14 +1085,14 @@ class Google_Service_MyBusiness extends Google_Service
           )
         )
     );
-    $this->googleLocations = new Google_Service_MyBusiness_GoogleLocations_Resource(
+    $this->googleLocations = new MyBusiness_GoogleLocations_Resource(
         $this,
         $this->serviceName,
         'googleLocations',
         array(
           'methods' => array(
             'report' => array(
-              'path' => 'v4/{+name}:report',
+              'path' => 'v1/{+name}:report',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -1100,21 +1102,21 @@ class Google_Service_MyBusiness extends Google_Service
                 ),
               ),
             ),'search' => array(
-              'path' => 'v4/googleLocations:search',
+              'path' => 'v1/googleLocations:search',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
           )
         )
     );
-    $this->verificationTokens = new Google_Service_MyBusiness_VerificationTokens_Resource(
+    $this->verificationTokens = new MyBusiness_VerificationTokens_Resource(
         $this,
         $this->serviceName,
         'verificationTokens',
         array(
           'methods' => array(
             'generate' => array(
-              'path' => 'v4/verificationTokens:generate',
+              'path' => 'v1/verificationTokens:generate',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
